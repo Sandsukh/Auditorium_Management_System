@@ -1,0 +1,12 @@
+<?php
+session_start();
+$_SESSION['event']=$_GET['event'];
+if(isset($_SESSION['user']))
+{
+    header('location:booking.php');
+}
+else
+{
+    header('location:login.php');
+}
+?>
